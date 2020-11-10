@@ -13,8 +13,8 @@ ScriptsOnlyBuild:
     - kalpCoin
     - kamyon
     - kmHesaplama
+    - konturol2
     - mermiCarpmasi
-    - mouseClicl
     - sari
     - score
     - turboValue
@@ -30,6 +30,9 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.CollabProxy.Editor.dll:
+    - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
+    - Unity.Cloud.Collaborate.UserInterface.WindowCache
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -41,22 +44,24 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.EventSystems.TouchInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/ArabaYarisi.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -96,59 +101,67 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12072}
     - Class: 114
+      Script: {instanceID: 12112}
+    - Class: 114
       Script: {instanceID: 12126}
     - Class: 114
       Script: {instanceID: 12290}
     - Class: 114
-      Script: {instanceID: 12550}
+      Script: {instanceID: 12552}
     - Class: 114
-      Script: {instanceID: 12708}
+      Script: {instanceID: 12712}
     - Class: 114
-      Script: {instanceID: 12896}
+      Script: {instanceID: 12842}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 12900}
     - Class: 114
-      Script: {instanceID: 13148}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 13218}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13316}
+      Script: {instanceID: 13222}
     - Class: 114
-      Script: {instanceID: 13400}
+      Script: {instanceID: 13320}
     - Class: 114
-      Script: {instanceID: 13422}
+      Script: {instanceID: 13404}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13426}
     - Class: 114
-      Script: {instanceID: 13878}
+      Script: {instanceID: 13630}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 14022}
+      Script: {instanceID: 13782}
     - Class: 114
-      Script: {instanceID: 14024}
+      Script: {instanceID: 13884}
     - Class: 114
-      Script: {instanceID: 14232}
+      Script: {instanceID: 14008}
     - Class: 114
-      Script: {instanceID: 14346}
+      Script: {instanceID: 14028}
     - Class: 114
-      Script: {instanceID: 14450}
+      Script: {instanceID: 14030}
     - Class: 114
-      Script: {instanceID: 14624}
+      Script: {instanceID: 14238}
     - Class: 114
-      Script: {instanceID: 14742}
+      Script: {instanceID: 14352}
     - Class: 114
-      Script: {instanceID: 15024}
+      Script: {instanceID: 14456}
     - Class: 114
-      Script: {instanceID: 15092}
+      Script: {instanceID: 14506}
     - Class: 114
-      Script: {instanceID: 15158}
+      Script: {instanceID: 14632}
     - Class: 114
-      Script: {instanceID: 15610}
+      Script: {instanceID: 14750}
     - Class: 114
-      Script: {instanceID: 20524}
+      Script: {instanceID: 15032}
     - Class: 114
-      Script: {instanceID: 21496}
+      Script: {instanceID: 15096}
+    - Class: 114
+      Script: {instanceID: 15100}
+    - Class: 114
+      Script: {instanceID: 15166}
+    - Class: 114
+      Script: {instanceID: 15792}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -156,6 +169,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -194,7 +211,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: cc3709efce5df311240e1a064144cb92
+      Hash: 4f69254ba04a4ccbf3f128ad0177f21e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: yon
@@ -368,6 +385,12 @@ ScriptsOnlyBuild:
     className: score
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: mouseClicl
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -518,6 +541,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 09bcb5d4ece800584e001d49375aadfb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: konturol2
+  - hash:
+      serializedVersion: 2
       Hash: b98d9e40c39a3a4f2ff94dd8daa29ddc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -630,6 +659,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: b98d9e40c39a3a4f2ff94dd8daa29ddc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: fireBall
   - hash:
       serializedVersion: 2
       Hash: b98d9e40c39a3a4f2ff94dd8daa29ddc
@@ -762,19 +797,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: b98d9e40c39a3a4f2ff94dd8daa29ddc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: fireBall
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: mouseClicl
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/semih/Desktop/deneme.apk
+  - Assets/ArabaYarisi.unity
+  playerPath: C:/Users/semih/Desktop/(Unity) ArabaYarisi/Ders3/RoadFighter.apk

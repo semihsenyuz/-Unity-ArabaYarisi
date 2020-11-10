@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class coin : MonoBehaviour
 {
@@ -9,7 +6,6 @@ public class coin : MonoBehaviour
     public GameObject araba;
 
     void OnCollisionEnter2D(Collision2D carpisma)
-
     {
         if (araba.tag==carpisma.gameObject.tag)
         {
@@ -22,8 +18,7 @@ public class coin : MonoBehaviour
 
     void Start()
     {
-
-        float rast = Random.Range(-1.40f, 1.40f);
+        float rast = Random.Range(-1.10f, 4.20f);
         transform.position = new Vector3(rast, 5.95f, transform.position.z);
     }
 
@@ -36,12 +31,9 @@ public class coin : MonoBehaviour
         }
 
         transform.Translate(0, -0.7f * Time.deltaTime, 0);
-        if (Health.hpValue <= 0 || fuel.fuelValue <= 0)
-        
+        if (Health.hpValue <= 0 || fuel.fuelValue <= 0)      
         {
             Destroy(gameObject);
         }
-
-
      }
 }

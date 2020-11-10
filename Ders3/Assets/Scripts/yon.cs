@@ -1,11 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
+using Button = UnityEngine.UI.Button;
 
 public class yon : MonoBehaviour
 {
     Rigidbody2D rigi;
 
+
+    public Button repeatButton;
     public Sprite Boom;
     public Sprite Turbo;
     public Sprite Normal;
@@ -22,10 +25,29 @@ public class yon : MonoBehaviour
     public GameObject turboAnimasyon;
 
 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         rigi = GetComponent<Rigidbody2D>();
+        Button repeat = repeatButton.GetComponent<Button>();
+        repeat.onClick.AddListener(TaskOnClick1);
+        if (Health.hpValue >=1 && fuel.fuelValue >=1)
+        {
+            repeatButton.gameObject.SetActive(false);
+        }
+    }
+
+    void TaskOnClick1()
+    {
+        Application.LoadLevel(0);
+        Health.hpValue = 100;
+        fuel.fuelValue = 350;
+        bulletValue.BulletValue = 1;
+        score.scoreValue = 0;
+        kmHesaplama.kmValue = 0;
     }
 
     // Update is called once per frame
@@ -59,6 +81,7 @@ public class yon : MonoBehaviour
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Boom;
             patlama.SetActive(true);
+            repeatButton.gameObject.SetActive(true);
             turboAnimasyon.SetActive(false);
             Health.hpValue = 0;
             turboValue.TurboValue = 0;
@@ -69,18 +92,18 @@ public class yon : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Boom;
             patlama.SetActive(true);
             turboAnimasyon.SetActive(false);
+            repeatButton.gameObject.SetActive(true);
             fuel.fuelValue = 0;
             turboValue.TurboValue = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            
             if (Health.hpValue > 0 && fuel.fuelValue > 0)
             {
                 turboAnimasyon.SetActive(true);
                 turboValue.TurboValue = 1;
-               
+
                 if (Health.hpValue >= 80)
                 {
                     if (bulletValue.BulletValue > 0)
@@ -133,7 +156,6 @@ public class yon : MonoBehaviour
                 }
                 rigi.velocity = Vector3.right;
             }
-
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
@@ -149,18 +171,17 @@ public class yon : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && Health.hpValue>=80)
+        if (Input.GetKeyUp(KeyCode.Space) && Health.hpValue >= 80)
         {
             if (Health.hpValue > 0 && fuel.fuelValue > 0)
             {
                 if (bulletValue.BulletValue > 0)
                 {
-                    GameObject mermi = Instantiate(mermiler,gameObject.transform);
+                    GameObject mermi = Instantiate(mermiler, gameObject.transform);
                     mermi.transform.position = gameObject.transform.position;
                     bulletValue.BulletValue--;
                 }
             }
-
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -175,3 +196,4 @@ public class yon : MonoBehaviour
         }
     }
 }
+    

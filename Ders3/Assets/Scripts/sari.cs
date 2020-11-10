@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class sari : MonoBehaviour
 {
@@ -22,7 +20,7 @@ public class sari : MonoBehaviour
         void Start()
     {
 
-        float rast = Random.Range(-1.40f, 1.40f);
+        float rast = Random.Range(-1.10f, 4.20f);
         transform.position = new Vector3(rast, 5.95f, transform.position.z);
     }
 

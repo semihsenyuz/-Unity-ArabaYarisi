@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class yonetici : MonoBehaviour
 {
-
     public GameObject cizgi;
     public GameObject kamyon;
     public GameObject sari;
@@ -16,23 +13,20 @@ public class yonetici : MonoBehaviour
     public GameObject engel;
     public GameObject gunCoin;
     public GameObject ball;
-
     float EngelX = 12.0f;
     void Start()
     {
         InvokeRepeating("cizgi_ekle", 0.0f, 0.5f);
-        InvokeRepeating("kamyon_ekle", 0.0f, 13.0f);
-        InvokeRepeating("sari_ekle", 0.0f, 8.0f);
-        InvokeRepeating("yesil_ekle", 0.0f, 5.0f);
-        InvokeRepeating("ev_ekle", 0.0f, 0.5f);
+        InvokeRepeating("kamyon_ekle", 0.0f, 11.0f);
+        InvokeRepeating("sari_ekle", 0.0f, 5.0f);
+        InvokeRepeating("yesil_ekle", 0.0f, 3.0f);
+        InvokeRepeating("ev_ekle", 0.0f, 0.7f);
         InvokeRepeating("coin_ekle", 0.0f, 10.0f);
         InvokeRepeating("kalp_ekle", 0.0f, 10.0f);
         InvokeRepeating("fuel_ekle", 0.0f, 10.0f);
         InvokeRepeating("engel_ekle", 0.0f, EngelX);
         InvokeRepeating("gun_ekle", 0.0f, 15.0f);
         InvokeRepeating("ball_ekle", 0.0f, 20.0f);
-
-
     }
 
     void ball_ekle()

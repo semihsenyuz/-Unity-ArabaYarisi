@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class kamyon : MonoBehaviour
 {
@@ -23,7 +21,7 @@ public class kamyon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rast = Random.Range(-1.40f, 1.40f);
+        rast = Random.Range(-1.10f, 4.20f);
         transform.position = new Vector3(rast, 5.95f, transform.position.z);
     }
 
